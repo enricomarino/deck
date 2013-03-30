@@ -50,7 +50,7 @@ Deck.prototype.constructor = Deck;
  */
 
 Deck.prototype.defaults = {
-  "selector": "article.slide";
+  "selector": "article.slide"
 };
 
 /**

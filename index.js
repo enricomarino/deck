@@ -1,4 +1,3 @@
-
 /**
  * Dependencies
  */
@@ -143,7 +142,6 @@ Deck.prototype.goto = function (i) {
   window.location = "#" + i;
   return this;
 };
-
 
 /**
  * show

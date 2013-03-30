@@ -1,0 +1,10 @@
+{
+  "name": "deck",
+  "repo": "enricomarino/deck",
+  "description": "Deck component",
+  "dependencies": {
+    "apily/emitter": "*"
+  },
+  "scripts": ["index.js"],
+  "license": "MIT"
+}

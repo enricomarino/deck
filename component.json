@@ -6,5 +6,6 @@
     "apily/emitter": "*"
   },
   "scripts": ["index.js"],
+  "styles": ["style.css"],
   "license": "MIT"
 }

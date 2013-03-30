@@ -27,6 +27,8 @@ var slice = array.slice;
  */
 
 function Deck (options) {
+  Emitter.call(this);
+
   var options = options || {};
   var defaults = this.defaults;
   var selector = options.selector || defaults.selector;

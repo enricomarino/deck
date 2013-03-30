@@ -115,10 +115,10 @@ Deck.prototype.nth = function (i) {
   if (i === this.current) {
     return this;
   }
-  if (i <= 0) {
+  if (i < 0) {
     return this;
   }
-  if (i >= this.n-1) {
+  if (i > this.n-1) {
     return this;
   }
   this.past = this.current;

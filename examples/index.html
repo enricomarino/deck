@@ -5,7 +5,32 @@
     <link rel="stylesheet" href="../build/build.css">
   </head>
   <body>
+  
+    <div class="slide">
+      <h1>Slide 0</h1>
+    </div>
+  
+    <div class="slide">
+      <h1>Slide 1</h1>
+    </div>
+    
+    <div class="slide">
+      <h1>Slide 2</h1>
+    </div>
     
     <script src="../build/build.js"></script>
+    <script>
+      var Deck = require('deck');
+      var Swipe = require('swipe');
+      
+      var deck = new Deck();
+      var swipe = new Swipe(document);
+      
+      var next = deck.next.bind(deck);
+      var prev = deck.prev.bind(deck);
+      
+      swipe.on('swipedown', next);
+      swipe.on('swipeup', prev);
+    </script>
   </body>
 </html>

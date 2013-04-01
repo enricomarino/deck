@@ -22,15 +22,29 @@
     <script>
       var Deck = require('deck');
       var Swipe = require('swipe');
+      var Keys = require('k');
+      var Router = require('router');
       
       var deck = new Deck();
-      var swipe = new Swipe(document);
+      var swipe = new Swipe(document.body);
+      var keys = new Keys(document);
+      var router = new Router();
       
       var next = deck.next.bind(deck);
       var prev = deck.prev.bind(deck);
+      var nth = deck.nth.bind(deck);
       
-      swipe.on('swipedown', next);
-      swipe.on('swipeup', prev);
-    </script>
+      swipe
+        .on('swipedown', prev)
+        .on('swipeup', next);
+      
+      keys
+        .bind('left, up, backspace', prev)
+        .bind('right, down, space', next);
+      
+      router
+        .route('#:i', nth)
+        .history.start();
+</script>
   </body>
 </html>
